@@ -3,10 +3,20 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('clone')
+  clone(): string {
+    return this.appService.clone();
+  }
+
+  @Get('getGitInfo')
+  getGitInfo(): any {
+    return this.appService.getGitInfo();
+  }
+
+  @Get('getBranches')
+  getBranches(): any {
+    return this.appService.getBranches();
   }
 }

@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@nestjs/axios': ^0.0.6
   '@nestjs/cli': ^8.0.0
   '@nestjs/common': ^8.0.0
   '@nestjs/core': ^8.0.0
@@ -30,6 +31,7 @@ specifiers:
   typescript: ^4.3.5
 
 dependencies:
+  '@nestjs/axios': registry.npmmirror.com/@nestjs/axios/0.0.6_9a0e39cada075cf8a453083f94ffa5a6
   '@nestjs/common': registry.npmmirror.com/@nestjs/common/8.3.1_0a8b9973a45cbeaad6b0063efdcaad84
   '@nestjs/core': registry.npmmirror.com/@nestjs/core/8.3.1_3ee156419336b921cef6d2ae294e6e72
   '@nestjs/platform-express': registry.npmmirror.com/@nestjs/platform-express/8.3.1_dc024985ab89eb73339eca509fad8031
@@ -915,6 +917,24 @@ packages:
       '@jridgewell/resolve-uri': registry.npmmirror.com/@jridgewell/resolve-uri/3.0.5
       '@jridgewell/sourcemap-codec': registry.npmmirror.com/@jridgewell/sourcemap-codec/1.4.11
     dev: true
+
+  registry.npmmirror.com/@nestjs/axios/0.0.6_9a0e39cada075cf8a453083f94ffa5a6:
+    resolution: {integrity: sha512-RgtKUziiEPRtWS3KJNDqq0Epw9ffFdIKAtcj6cXnWeJvgHLwnDkw2rUsmHpDYrhszG+8bc4H8sDygRKwNPPAQA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@nestjs/axios/-/axios-0.0.6.tgz}
+    id: registry.npmmirror.com/@nestjs/axios/0.0.6
+    name: '@nestjs/axios'
+    version: 0.0.6
+    peerDependencies:
+      '@nestjs/common': ^7.0.0 || ^8.0.0
+      reflect-metadata: ^0.1.12
+      rxjs: ^6.0.0 || ^7.0.0
+    dependencies:
+      '@nestjs/common': registry.npmmirror.com/@nestjs/common/8.3.1_0a8b9973a45cbeaad6b0063efdcaad84
+      axios: registry.npmmirror.com/axios/0.26.0
+      reflect-metadata: registry.npmmirror.com/reflect-metadata/0.1.13
+      rxjs: registry.npmmirror.com/rxjs/7.5.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   registry.npmmirror.com/@nestjs/cli/8.2.1_eslint@8.9.0:
     resolution: {integrity: sha512-GnwpORSIkGl6N6yWPONq1wwZ8+zltr3vF1M/2qzupDnXOAvSSCh1otDQRAmeOf3uIIeCiCsJEEx79kRnT7Zdrw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@nestjs/cli/-/cli-8.2.1.tgz}
