@@ -1,25 +1,19 @@
 import { Injectable } from '@nestjs/common';
-import { exec } from 'child_process'
 import { HttpService } from '@nestjs/axios'
+import { CLONE_PATH, GIT_INFO, GIT_BRANCHES } from '../private/constant'
+import { fetch, execPromise } from '../utils/promise'
 
 @Injectable()
 export class AppService {
   constructor(private httpService: HttpService) { }
-  clone(): any {
-    exec(`git clone ${path}`, (error, stdout, stderr) => {
-    })
+  async clone() {
+    const data = await execPromise(`git clone ${CLONE_PATH}`)
+    return data ? '项目已存在' : '下载成功'
   }
-  getGitInfo() {
-    this.httpService.get(branches).subscribe((response) => {
-      return response.data;
-    });
-    return '23'
+  async getGitInfo() {
+    return await fetch(this.httpService, 'get', GIT_INFO)
   }
-
-  getBranches() {
-    this.httpService.get(branches).subscribe((response) => {
-      return response.data;
-    });
-    return '23'
+  async getBranches() {
+    return await fetch(this.httpService, 'get', GIT_BRANCHES)
   }
 }

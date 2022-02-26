@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) { }
 
   @Get('clone')
-  clone(): string {
+  clone(): any {
     return this.appService.clone();
   }
 
