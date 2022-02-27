@@ -5,6 +5,10 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) { }
 
+  @Get('test')
+  test() {
+    return this.appService.test()
+  }
   @Get('clone')
   clone(): any {
     return this.appService.clone();
@@ -18,5 +22,15 @@ export class AppController {
   @Get('getBranches')
   getBranches(): any {
     return this.appService.getBranches();
+  }
+
+  @Get('checkout')
+  checkout(): any {
+    return this.appService.checkout();
+  }
+
+  @Get('build')
+  build(): any {
+    return this.appService.build();
   }
 }
