@@ -1,13 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+  constructor(private readonly appService: AppService) {}
 
   @Get('test')
   test() {
-    return this.appService.test()
+    return this.appService.test();
   }
   @Get('clone')
   clone(): any {
@@ -32,5 +32,12 @@ export class AppController {
   @Get('build')
   build(): any {
     return this.appService.build();
+  }
+
+  /************************************************************************************************ */
+  // 接收参数 微信/支付宝
+  @Get('myQuery')
+  myQuery(@Query('type') type) {
+    return this.appService.myQuery(type);
   }
 }
